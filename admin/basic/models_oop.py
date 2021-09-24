@@ -33,6 +33,7 @@ class Calculator(object):
         return self.num1 % self.num2
 
 
+@dataclass
 class Grade(object):
     kor :int
     eng :int
@@ -76,4 +77,34 @@ class Grade(object):
             return 'E'
         else:
             return 'F'
-        return null
+
+
+@dataclass
+class Contacts:
+
+    def __init__(self, name, phone, email, address):
+        self.name = name
+        self.phone = phone
+        self.email = email
+        self.address = address
+
+    def to_string(self) -> str:
+        return f'{self.name}, {self.phone}, {self.email}, {self.address}'
+
+    @staticmethod
+    def set_contact(name, phone, email, address) -> object:
+        return Contacts(name, phone, email, address)
+
+    # @staticmethod
+    # def get_contact(contacts) -> []:
+    #     for contact in contacts:
+    #         contact.to_string()
+    #     return contacts
+
+    @staticmethod
+    def del_contact(contacts, name) -> []:
+        for i, val in enumerate(contacts):
+            if name == val.name:
+                del contacts[i]
+                break
+        return contacts
