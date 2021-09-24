@@ -8,5 +8,5 @@ author_email='lmn1654@gmail.com',
 license='MIT',
 py_modules=['calWordsFreq', 'findKeywordSentences'],
 python_requires='>=3',
-packages=['sorting']
+packages=['basic']
 )

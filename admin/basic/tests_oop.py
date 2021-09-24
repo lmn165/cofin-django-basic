@@ -1,5 +1,5 @@
 import unittest
-from sorting.models_oop import Calculator, Grade
+from basic.models_oop import Calculator, Grade
 
 class TestCalculator(unittest.TestCase):
     cal = Calculator()

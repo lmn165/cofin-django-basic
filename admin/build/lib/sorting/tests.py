@@ -1,7 +1,7 @@
 from django.test import TestCase
 import unittest
 # Create your tests here.
-from sorting.models import MySum
+from basic.models import MySum
 
 class TestMySum(unittest.TestCase):
 

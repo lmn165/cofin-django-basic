@@ -1,7 +1,7 @@
 from django.test import TestCase
 import unittest
 # Create your tests here.
-from sorting.models import MySum, Palindrome
+from basic.models import MySum, Palindrome
 
 class TestMySum(unittest.TestCase):
 
@@ -13,10 +13,11 @@ class TestMySum(unittest.TestCase):
         print(f'My Expected Value is {res}')
         self.assertEqual(res, 55)
 
+
+class TestPalindrome(unittest.TestCase):
+
     def test_palindrome(self):
         instance = Palindrome()
-        # instance.str_to_list("A man, a plan, a canal: Panama")
-        # print(str_arr)
         self.assertEqual(instance.isPalindrome(instance.str_to_list("A man, a plan, a canal: Panama"))["Result"], True)
 
 if __name__ == '__main__':
